@@ -1,0 +1,17 @@
+<mat-form-field appearance="fill">
+    <mat-label >Ad</mat-label>
+    <input type="text" matInput required #textName>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label >stock</mat-label >
+    <input type="number" matInput required #textStock>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label >Price</mat-label >
+    <input type="number" matInput required #textPrice>
+  </mat-form-field>
+
+
+
+  <button  (click)="Create(textName,textStock,textPrice)" class="addbutton" mat-raised-button color="primary">Kullanıcı Ekle</button>
