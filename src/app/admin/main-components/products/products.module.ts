@@ -12,6 +12,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { ListProductComponent } from './list-product/list-product.component';
+import { DeleteDirective } from 'src/app/directives/admin/delete.directive';
+import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dialog.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { ListProductComponent } from './list-product/list-product.component';
     ProductsComponent,
     AddProductComponent,
     ListProductComponent,
+    DeleteDirective,
+    DeleteDialogComponent
 
   ],
   imports: [
@@ -32,7 +36,7 @@ import { ListProductComponent } from './list-product/list-product.component';
     MatTableModule,
     MatDialogModule,
     RouterModule.forChild([{path:"",component:ProductsComponent,children:[{
-      path:"list",component:ListProductComponent
+      path:"",component:ListProductComponent
     }]}])
   ],exports:[ProductsComponent,AddProductComponent]
 })

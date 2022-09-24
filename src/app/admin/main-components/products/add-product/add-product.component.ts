@@ -14,6 +14,7 @@ export class AddProductComponent implements OnInit {
   opened:boolean;
   ProductToAdd:Create_Product=new Create_Product();
   ngOnInit(): void {
+   
   }
   open(){
     this.opened=false

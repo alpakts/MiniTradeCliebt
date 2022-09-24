@@ -10,9 +10,13 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import {HttpClientModule} from '@angular/common/http'
 import { MatFormFieldModule } from '@angular/material/form-field';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
+    
   ],
   imports: [
     BrowserAnimationsModule,

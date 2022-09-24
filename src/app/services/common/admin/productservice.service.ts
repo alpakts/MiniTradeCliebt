@@ -15,4 +15,7 @@ export class ProductserviceService {
   GetUser<T>(apiurl:string):Observable<T>{
     return this.httpservice.get<T>(apiurl)
   }
+  Delete(apiurl:string,id:number):Observable<any>{
+    return this.httpservice.post(`${apiurl}?userId=${id}`,null)
+  }
 }

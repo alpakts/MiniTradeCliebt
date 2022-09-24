@@ -10,7 +10,7 @@ import { MatDrawer } from '@angular/material/sidenav';
 export class ProductsComponent implements OnInit {
 
   constructor() { }
-  opened:boolean=true
+  opened:boolean=false
   ngOnInit(): void {
   }
   open(){
