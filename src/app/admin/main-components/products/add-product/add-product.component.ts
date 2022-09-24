@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Create_Product } from 'src/app/models/create-product';
 import { ProductserviceService } from 'src/app/services/common/admin/productservice.service';
 import {ToastrService} from "ngx-toastr"
 import { HttpErrorResponse } from '@angular/common/http';
+import { FileUploadOptions } from 'src/app/services/common/file-upload/file-upload.component';
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-
+  @Output() options:Partial<FileUploadOptions>={apiUrl:"apiurl",explenation:"Resimleri sürükleyiniz Ya da Seçiniz  ",fileTypes:".png,.jpg,.jpeg"}
   constructor(private service:ProductserviceService,private toastr:ToastrService) { }
   opened:boolean;
   ProductToAdd:Create_Product=new Create_Product();

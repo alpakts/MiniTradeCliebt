@@ -14,6 +14,7 @@ import {MatTableModule} from '@angular/material/table';
 import { ListProductComponent } from './list-product/list-product.component';
 import { DeleteDirective } from 'src/app/directives/admin/delete.directive';
 import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dialog.component';
+import { FileUploadModule } from 'src/app/services/common/file-upload/file-upload.module';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dial
     MatSidenavModule,
     MatPaginatorModule,
     MatSelectModule,
+    FileUploadModule,
     MatTableModule,
     MatDialogModule,
     RouterModule.forChild([{path:"",component:ProductsComponent,children:[{

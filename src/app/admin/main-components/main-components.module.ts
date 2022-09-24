@@ -4,6 +4,7 @@ import { ProductsModule } from './products/products.module';
 import { OrdersModule } from './orders/orders.module';
 import { CustomersModule } from './customers/customers.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { NgxFileDropModule } from 'ngx-file-drop';
 
 
 
@@ -14,7 +15,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     ProductsModule,
     OrdersModule,
     CustomersModule,
-    DashboardModule
+    DashboardModule,
+    NgxFileDropModule
   ],exports:[DashboardModule,ProductsModule,OrdersModule,CustomersModule]
 })
 export class MainComponentsModule { }
