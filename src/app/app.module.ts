@@ -10,11 +10,13 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import {HttpClientModule} from '@angular/common/http'
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { DialogModule } from '@angular/cdk/dialog';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+  
     
     
   ],
@@ -26,6 +28,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AdminModule,
     MatFormFieldModule,
     UiModule,
+
     ToastrModule.forRoot({
       positionClass:"toast-top-right"
     }),

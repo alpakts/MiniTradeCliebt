@@ -15,6 +15,7 @@ import { ListProductComponent } from './list-product/list-product.component';
 import { DeleteDirective } from 'src/app/directives/admin/delete.directive';
 import { DeleteDialogComponent } from 'src/app/dialogs/delete-dialog/delete-dialog.component';
 import { FileUploadModule } from 'src/app/services/common/file-upload/file-upload.module';
+import { DialogsModule } from 'src/app/dialogs/dialogs.module';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { FileUploadModule } from 'src/app/services/common/file-upload/file-uploa
     AddProductComponent,
     ListProductComponent,
     DeleteDirective,
-    DeleteDialogComponent
+    
 
   ],
   imports: [
@@ -37,6 +38,7 @@ import { FileUploadModule } from 'src/app/services/common/file-upload/file-uploa
     FileUploadModule,
     MatTableModule,
     MatDialogModule,
+    DialogsModule,
     RouterModule.forChild([{path:"",component:ProductsComponent,children:[{
       path:"",component:ListProductComponent
     }]}])

@@ -10,7 +10,7 @@ import { FileUploadOptions } from 'src/app/services/common/file-upload/file-uplo
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-  @Output() options:Partial<FileUploadOptions>={apiUrl:"apiurl",explenation:"Resimleri sürükleyiniz Ya da Seçiniz  ",fileTypes:".png,.jpg,.jpeg"}
+  @Output() options:Partial<FileUploadOptions>={apiUrl:"https://localhost:7052/api/Products/Upload",explenation:"Resimleri sürükleyiniz Ya da Seçiniz  ",fileTypes:".png,.jpg,.jpeg"}
   constructor(private service:ProductserviceService,private toastr:ToastrService) { }
   opened:boolean;
   ProductToAdd:Create_Product=new Create_Product();
