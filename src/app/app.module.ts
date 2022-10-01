@@ -8,9 +8,10 @@ import { UiModule } from './ui/ui.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { DialogModule } from '@angular/cdk/dialog';
+import { HttpErrorHandlerService } from './services/common/http-error-handler.service';
 
 
 @NgModule({
@@ -35,7 +36,9 @@ import { DialogModule } from '@angular/cdk/dialog';
     NgxSpinnerModule,
     
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:HttpErrorHandlerService,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
